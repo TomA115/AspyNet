@@ -36,7 +36,7 @@ const TopBanner: React.FC = () =>{
 
     return(
     <div className='top-banner'>
-      <div onClick={HandleNameTagClick} className='nametag'>TomAspinall.uk</div>
+      <div onClick={HandleNameTagClick} className='nametag'>TomAspinall</div>
       <div className='header-buttons'>
         <button className='banner-button'> Blog</button>
         <button onClick={HandleContactButtonOnClick} className='banner-button'> Contact </button>
