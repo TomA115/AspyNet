@@ -3,7 +3,6 @@ import './CSS/ContactPage.css';
 import TopBanner from "./topbanner";
 import ContactForm from "./contactForm";
 import Footer from "./footer";
-import backgroundImage from "./Assets/contact_background.jpeg";
 
 const ContactPage: React.FC = () => {     
     return (

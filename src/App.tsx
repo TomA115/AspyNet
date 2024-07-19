@@ -2,7 +2,6 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import HomePage from './HomePage';
 import ContactPage from './contactPage';
-import TopBanner from './topbanner';
 
 
 const App: React.FC = () =>{

@@ -1,4 +1,4 @@
-import {useState,useEffect} from "react";
+import {useState} from "react";
 import './CSS/ContactPage.css'
 import './ApiService';
 import { ContactResponse, postContactForm } from "./ApiService";
