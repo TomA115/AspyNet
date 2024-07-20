@@ -26,8 +26,6 @@ const BlogPage = () =>{
       const imageUrl = imgTag ? imgTag.src : '';
       return imageUrl;
     }
-
-
     useEffect(() =>{
         getPostData();
     },[])
@@ -38,7 +36,7 @@ const BlogPage = () =>{
       <div className="posts-container">
         {posts.map((post,index) => 
         (<BlogCard key={index} title={post.title}
-        description={post.description} link={post.link} photoLink={`${getImage(post.description)}`} />
+        description={post.description} link={post.link} photoLink={`${getImage(post.description)}`} pubDate= {post.pubDate}/>
         ))}
       </div>
       <Footer wideFooter={false}/>
