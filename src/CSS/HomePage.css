@@ -117,6 +117,7 @@ html,body{
   box-sizing: border-box;
   padding: 10px;
   margin: 35px;
+  margin-right: 90px;
   flex-direction: column;
   border-radius: 5px;
 }
@@ -148,11 +149,12 @@ html,body{
 
 .profile-pic{
   display: block;
-  margin: 20px auto; 
+  margin: 20px auto 20px 50px; 
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
   border-radius: 10px; 
   min-height: 50vh;
   width: auto;
+  
 }
 
 .link-container{
