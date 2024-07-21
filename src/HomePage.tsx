@@ -36,7 +36,7 @@ const HomePage: React.FC = () => {
     <p>If you scroll further or even if you choose not to click any other link, then please click one of the links below. You could make a real difference.</p></div>
                     <div className='link-container'>
                         <ImageLink imageUrl={`${process.env.PUBLIC_URL}/kidney-research.png`} linkUrl="https://www.kidneyresearchuk.org/support/" altText="Kidney Research UK" />
-                        <ImageLink imageUrl={`${process.env.PUBLIC_URL}/CRUK.PNG`} linkUrl="https://www.cancerresearchuk.org/" altText="Cancer Research UK" />
+                        <ImageLink imageUrl={`${process.env.PUBLIC_URL}/cruk.PNG`} linkUrl="https://www.cancerresearchuk.org/" altText="Cancer Research UK" />
                         <ImageLink imageUrl={`${process.env.PUBLIC_URL}/claire-house.png`} linkUrl="https://www.clairehouse.org.uk/donate/" altText="Claire House Childrens Hospice" />
                     </div>
                 </div>
