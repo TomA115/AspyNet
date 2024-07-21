@@ -1,6 +1,5 @@
 import './CSS/HomePage.css';
 import React, { useRef } from 'react';
-import TopBanner from './topbanner';
 import Footer from './footer';
 import ImageLink from './ImageLink';
 import ContactForm from './contactForm';
