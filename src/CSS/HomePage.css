@@ -90,11 +90,6 @@ html,body{
   width: auto;
 }
 
-
-.extra-content{
-  height: 1500px;
-}
-
 .about-container{
   display: flex;
   justify-content: flex-start;
@@ -104,7 +99,6 @@ html,body{
   min-height: 100vh;
   padding: 10px;
   box-sizing: border-box;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .about-content{
@@ -116,14 +110,16 @@ html,body{
   max-width: 500px;
   box-sizing: border-box;
   padding: 10px;
-  margin: 35px;
-  margin-right: 90px;
+  margin: 2%;
+  margin-right: 7%;
+  max-width: 35vw;
   flex-direction: column;
   border-radius: 5px;
+  height: 90%;
 }
 
 .about-header{
-  font-size: 24px;
+  font-size: 20pt;
   display: flex;
   font-weight: bold;
   padding: 10px;
@@ -133,7 +129,7 @@ html,body{
 }
 
 .about-body{
-  font-size: 20px;
+  font-size: 18pt;
   display: flex;
   padding: 10px;
   flex-direction: column;
@@ -148,12 +144,14 @@ html,body{
 }
 
 .profile-pic{
-  display: block;
-  margin: 20px auto 20px 50px; 
+  display: flex;
+  margin: 2% auto 2% 50px; 
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
   border-radius: 10px; 
-  min-height: 50vh;
-  width: auto;
+  min-height: 30vh;
+  height: auto;
+  max-height: 100vh;
+  width:40%;
   
 }
 
@@ -167,7 +165,6 @@ html,body{
 
 .contact-container {
   width: 100%;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   margin: auto;
   padding: 10px;
   display: flex;
@@ -177,8 +174,13 @@ html,body{
   justify-content: flex-start;
   animation: fadeIn 1s ease-in-out;
   min-height: 100vh;
-  border-radius: 10px;
   background-color:  #7A93AC;
+}
+
+.divider{
+  height: 15px;
+  width: 100%;
+  background-color: #091D2A;
 }
 
 .learn-more-button{
@@ -207,5 +209,54 @@ html,body{
   }
   to{
     opacity: 100 ;
+  }
+}
+
+@media (max-width: 768px) {
+
+
+  .intro-line-one,
+  .intro-line-two {
+    font-size: 36px;
+  }
+  .about-container{
+    flex-direction: column;
+    align-items: center;
+    
+  }
+
+  .about-content {
+    margin:  auto; /* Center the content */
+    padding: 20px;
+    width: 90%;
+    max-width: 90vw;
+
+  }
+
+  .about-body{
+    font-size: 12pt;
+  }
+  .about-header{
+    font-size: 14pt;
+  }
+
+  .profile-pic {
+    margin: 20px auto;
+    min-height: 10vh;
+    max-height: 25vh;
+    width: auto;
+  }
+
+  .link-container {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .learn-more-button {
+    width: auto;
+    max-width: 100%;
+  }
+  .landing-pic::before {
+    background-attachment: scroll; /* Change background attachment */
   }
 }

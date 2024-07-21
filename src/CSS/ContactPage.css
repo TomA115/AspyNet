@@ -156,3 +156,13 @@
     opacity: 1;
   }
 }
+
+@media (max-width: 768px) {
+
+  .form-container{
+    width: 90%;
+  }
+  .form-title {
+    font-size: 30pt;
+  }
+}
