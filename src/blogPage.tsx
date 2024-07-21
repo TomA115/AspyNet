@@ -10,7 +10,7 @@ const BlogPage = () => {
 
     const getPostData = () => {
         axios
-          .get("https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@pavicary")
+          .get("https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@thomasaspy1")
           .then((res) => {
             const allPosts = res.data.items;
             setPosts(allPosts.slice(0, 3));
