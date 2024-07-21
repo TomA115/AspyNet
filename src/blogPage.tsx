@@ -3,8 +3,6 @@ import { useEffect, useState, useRef } from "react";
 import BlogCard from "./blogCard";
 import { Post } from "./blogCard";
 import './CSS/Blog.css'
-import Footer from "./footer";
-import TopBanner from "./topbanner";
 
 const BlogPage = () => {
     const [posts, setPosts] = useState<Post[]>([]);
