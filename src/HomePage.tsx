@@ -18,7 +18,7 @@ const HomePage: React.FC = () => {
         <div className='content'>
             <div className='landing-pic'>
                 <div className='intro-box'>
-                    <div className='intro-line-one'>Welcome, I'm Tom</div>
+                    <div className='intro-line-one'>Welcome, I'm Tom.</div>
                     <div className='intro-line-two'>a software developer</div>
                     <button className='learn-more-button'onClick={scrollAbout}> About me</button>
                 </div>
@@ -30,7 +30,7 @@ const HomePage: React.FC = () => {
                     <div className='about-header'>About me</div>
                     <div className='about-body'>
                     <p>I am a London based software developer currently working for the Bank of England. I mainly have backend experience focusing on data mastering and ETL pipelines but am always trying to learn new skills.</p>
-    <p>I have a preference for backend but am currently working on improving my frontend skills. I have experience in C#, .NET Core, Python, SQL Server, SSIS, CSS/HTML, RESTful APIs</p>
+    <p>I have a preference for backend but am currently working on improving my frontend skills. I have experience in C#, .NET Core, Python, SQL Server, SSIS, CSS/HTML and RESTful APIs.</p>
     <p>This website (more specifically my <a href='https://medium.com/@thomasaspy1'>Medium page)</a> is a place for me to post my musings on technology, personal projects, and anything I find interesting.</p>
         
     <p>If you scroll further or even if you choose not to click any other link, then please click one of the links below. You could make a real difference.</p></div>
@@ -42,6 +42,7 @@ const HomePage: React.FC = () => {
                 </div>
             </div>
             <BlogPage/>
+            <div className='divider'/>
             <div className='contact-container'><ContactForm />
             <ImageLink imageUrl={`${process.env.PUBLIC_URL}/linkedinlogo2.png`} linkUrl="https://www.linkedin.com/in/tom-aspinall-6330951b8" altText="LinkedIn Profile"></ImageLink></div>
             <Footer wideFooter={true} />
