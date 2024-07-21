@@ -38,7 +38,7 @@ const BlogPage = () => {
                 }
             });
         }, {
-            threshold: 0.1 // Adjust this value to determine how much of the element should be visible before triggering the animation
+            threshold: 0.5
         });
 
         const cards = postsContainerRef.current?.querySelectorAll('.card');
