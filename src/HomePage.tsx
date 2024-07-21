@@ -16,7 +16,6 @@ const HomePage: React.FC = () => {
 
     return (
         <div className='content'>
-            <TopBanner />
             <div className='landing-pic'>
                 <div className='intro-box'>
                     <div className='intro-line-one'>Welcome, I'm Tom</div>
@@ -42,7 +41,8 @@ const HomePage: React.FC = () => {
                     </div>
                 </div>
             </div>
-            <div className='contact-container'><ContactForm /></div>
+            <div className='contact-container'><ContactForm />
+            <ImageLink imageUrl={`${process.env.PUBLIC_URL}/linkedinlogo2.png`} linkUrl="https://www.linkedin.com/in/tom-aspinall-6330951b8" altText="LinkedIn Profile"></ImageLink></div>
             <Footer wideFooter={true} />
         </div>
     );
