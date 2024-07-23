@@ -12,6 +12,7 @@ const ContactForm :React.FC = () =>{
         Subject: '',
         EmailAddress: ''
     }
+
     const [form, setForm] = useState<ContactResponse>(initialFormValues);
     
     const [buttonText,setButtonText] = useState('Submit');

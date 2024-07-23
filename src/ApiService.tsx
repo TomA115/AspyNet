@@ -1,8 +1,3 @@
-import axios from "axios";
-
-//const base_URL = 'https://localhost:5098/api'
-
-const base_URL = 'http://aspynetapi.azurewebsites.net/api';
 
 export interface AboutContent {
     aboutTextId: number;
@@ -16,6 +11,10 @@ export interface ContactResponse{
   EmailAddress:string;
 }
 export const postContactForm = async (form: ContactResponse): Promise<void> => {
+  const {EmailClient} = require("@azure/communication-email");
+
+  const connectionString = "endpoint=https://aspyemailer.uk.communication.azure.com/;accesskey=6xAz4brvdQCLgMMsS31MzlIgJL4ICLeRSm2Mj9HgKxZWqg0wC8ieJQQJ99AGACULyCpcOiRxAAAAAZCSsM88"
+  const client = new EmailClient(connectionString);
   try {
     var formToSend: ContactResponse = {
       ContactResponseText: form.ContactResponseText,
@@ -25,53 +24,21 @@ export const postContactForm = async (form: ContactResponse): Promise<void> => {
     };
 
     console.log('Form data being sent:', formToSend);
-
-    var response = await axios.post(`${base_URL}/contact/emailContactForm`, formToSend, {
-      headers: {
-        'Content-Type': 'application/json'
-      }
-    });
-
-    if (response.status !== 200) {
-      console.log(response.statusText);
-      throw new Error("Failed to send email");
+    const message = {
+      senderAddress:"DoNotReply@379d5ed1-5188-4984-bde3-02c31707bf3c.azurecomm.net",
+      content:{
+        subject: formToSend.Subject,
+        plainText: formToSend.ContactResponseText,
+      },
+      recipients:{
+        to:[{address:"thomasaspy1@gmail.com"}],
+      },
     }
+
+    const poller = await client.beginSend(message);
+    await poller.pollUntilDone();
+
   } catch (error) {
-    if (axios.isAxiosError(error)) {
-      console.error("Axios error:", error.message);
-      if (error.response) {
-        console.error("Response data:", error.response.data);
-        console.error("Response status:", error.response.status);
-        console.error("Response headers:", error.response.headers);
-      } else if (error.request) {
-        console.error("Request made but no response received:", error.request);
-      } else {
-        console.error("Error setting up the request:", error.message);
-      }
-    } else {
-      console.error("Unexpected error:", error);
-    }
-
-    throw new Error("Failed to send email");
-  }
+      console.log("Error sending email",error);
 }
-
-export const getAboutContent = async (): Promise<AboutContent> => {
-    try {
-      const response = await axios.get(`${base_URL}/site/about`);
-      return response.data;
-    } catch (error) {
-      console.error('Error fetching about content:', error);
-      throw error;
-    }
-  };
-
-
-export const deleteAboutContent = async (): Promise<void> => {
-    try {
-      await axios.delete(`${base_URL}/site/about`);
-    } catch (error) {
-      console.error('Error deleting about content:', error);
-      throw error;
-    }
-  };
+};
