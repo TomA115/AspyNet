@@ -1,0 +1,31 @@
+name: Deploy React App to Azure Static Website
+
+on:
+  push:
+    branches:
+      - UAT  
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '16'  
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Build the project
+      run: npm run build
+
+    - name: Upload to Azure Storage
+      uses: azure/CLI@v1
+      with:
+        inlineScript: |
+          az storage blob upload-batch --account-name ${{ secrets.AZURE_STORAGE_ACCOUNT_UAT }} --account-key ${{ secrets.AZURE_STORAGE_ACCESS_KEY_UAT }} --source ./build --destination \$web --overwrite
