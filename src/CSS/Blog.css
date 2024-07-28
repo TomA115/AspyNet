@@ -117,5 +117,8 @@ html, body {
     .card h3{
         font-size: 10pt;
     }
+    .card.in-view{
+        height: 60%;
+    }
 
 }
