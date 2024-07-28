@@ -1,4 +1,4 @@
-name: Deploy React App to Azure Static Website
+name: Deploy to UAT
 
 on:
   push:
