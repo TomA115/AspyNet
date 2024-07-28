@@ -45,6 +45,7 @@
   @media (max-width: 768px) {
     .page-title{
         font-size: 24pt;
+        margin: 5%;
     }
     .title-container{
         width: 95%;
