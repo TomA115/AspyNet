@@ -4,7 +4,6 @@ import Footer from './footer';
 import ImageLink from './ImageLink';
 import ContactForm from './contactForm';
 import BlogPage from './blogPage';
-import MusicPage from './musicPage';
 
 const HomePage: React.FC = () => {
     const aboutLoc = useRef<HTMLDivElement>(null);
@@ -43,8 +42,6 @@ const HomePage: React.FC = () => {
                 </div>
             </div>
             <BlogPage/>
-            <div className='divider'/>
-            <MusicPage/>
             <div className='divider'/>
             <div className='contact-container'><ContactForm />
             <ImageLink imageUrl={`${process.env.PUBLIC_URL}/linkedinlogo2.png`} linkUrl="https://www.linkedin.com/in/tom-aspinall-6330951b8" altText="LinkedIn Profile"></ImageLink></div>
