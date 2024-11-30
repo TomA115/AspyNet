@@ -1,4 +1,4 @@
-import './CSS/footer.css'
+import '../CSS/footer.css'
 import React from 'react'
 
 interface footerProps{

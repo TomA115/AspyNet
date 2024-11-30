@@ -1,4 +1,4 @@
-import './CSS/MusicPage.css'
+import '../CSS/MusicPage.css'
 
 const MusicPage = () => {
 

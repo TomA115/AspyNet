@@ -1,5 +1,5 @@
 import {useState} from "react";
-import './CSS/ContactPage.css'
+import '../CSS/ContactPage.css'
 import './ApiService';
 import { ContactResponse, postContactForm } from "./ApiService";
 
