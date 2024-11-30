@@ -23,9 +23,9 @@ jobs:
       
     - name: Debug Secrets
       run: |
-        echo "AzureEmailEndpoint=${{ secrets.AzureEmailEndpoint | tojson }}"
-        echo "EmailFromAddress=${{ secrets.EmailFromAddress | tojson }}"
-        echo "EmailToAddress=${{ secrets.EmailToAddress | tojson }}"
+        echo "AzureEmailEndpoint=\"${{ secrets.AzureEmailEndpoint }}\""
+        echo "EmailFromAddress=\"${{ secrets.EmailFromAddress }}\""
+        echo "EmailToAddress=\"${{ secrets.EmailToAddress }}\""
       
     - name: Transform JSON
       run: |
