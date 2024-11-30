@@ -1,6 +1,5 @@
 import {useState} from "react";
 import '../CSS/ContactPage.css'
-import './ApiService';
 import { ContactResponse, postContactForm } from "./ApiService";
 
 
@@ -39,9 +38,8 @@ const ContactForm :React.FC = () =>{
     }
 
     return(
-        <>
         <form className="form-container" onSubmit={HandleFormSubmit}>
-        <label className="form-title">Get in contact</label>
+        <h1 className="form-title">Get in contact</h1>
         <input
         id="name"
         name="name"
@@ -84,7 +82,6 @@ const ContactForm :React.FC = () =>{
         </input>
         <button  className="form-button">{buttonText}</button>
         </form>
-        </>
     )
 }
 

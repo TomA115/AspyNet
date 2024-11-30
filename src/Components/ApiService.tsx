@@ -16,7 +16,7 @@ export const postContactForm = async (form: ContactResponse): Promise<void> => {
   const connectionString = "endpoint=https://aspyemailer.uk.communication.azure.com/;accesskey=6xAz4brvdQCLgMMsS31MzlIgJL4ICLeRSm2Mj9HgKxZWqg0wC8ieJQQJ99AGACULyCpcOiRxAAAAAZCSsM88"
   const client = new EmailClient(connectionString);
   try {
-    var formToSend: ContactResponse = {
+    let formToSend: ContactResponse = {
       ContactResponseText: form.ContactResponseText,
       Subject: "Sent from " + form.name + " at " + form.EmailAddress + " " + form.Subject,
       EmailAddress: form.EmailAddress,

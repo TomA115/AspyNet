@@ -1,7 +1,6 @@
 import axios from "axios";
 import { useEffect, useState, useRef } from "react";
-import BlogCard from "../Components/blogCard";
-import { Post } from "../Components/blogCard";
+import BlogCard, {Post} from "../Components/blogCard";
 import '../CSS/Blog.css';
 
 const BlogPage = () => {
