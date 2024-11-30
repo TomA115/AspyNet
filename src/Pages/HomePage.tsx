@@ -1,8 +1,8 @@
-import './CSS/HomePage.css';
+import '../CSS/HomePage.css';
 import React, { useRef } from 'react';
-import Footer from './footer';
-import ImageLink from './ImageLink';
-import ContactForm from './contactForm';
+import Footer from '../Components/footer';
+import ImageLink from '../Components/ImageLink';
+import ContactForm from '../Components/contactForm';
 import BlogPage from './blogPage';
 
 const HomePage: React.FC = () => {
@@ -19,7 +19,7 @@ const HomePage: React.FC = () => {
             <div className='landing-pic'>
                 <div className='intro-box'>
                     <div className='intro-line-one'>Welcome, I'm Tom.</div>
-                    <div className='intro-line-two'>a software developer</div>
+                    <div className='intro-line-two'>a developer</div>
                     <button className='learn-more-button'onClick={scrollAbout}> About me</button>
                 </div>
             </div>

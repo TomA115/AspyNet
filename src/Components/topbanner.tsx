@@ -1,6 +1,6 @@
 import ImageLink from './ImageLink';
 import { useNavigate } from 'react-router-dom';
-import './CSS/TopBanner.css';
+import '../CSS/TopBanner.css';
 import React from 'react';
 
 const TopBanner: React.FC = () => {

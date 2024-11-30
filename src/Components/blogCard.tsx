@@ -1,4 +1,4 @@
-import './CSS/Blog.css'
+import '../CSS/Blog.css'
 const BlogCard = (_post:Post) =>
 {
     const toText = (node:string) =>{

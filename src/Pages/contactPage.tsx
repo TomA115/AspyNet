@@ -1,8 +1,8 @@
 import React from "react";
-import './CSS/ContactPage.css';
-import TopBanner from "./topbanner";
-import ContactForm from "./contactForm";
-import Footer from "./footer";
+import '../CSS/ContactPage.css';
+import TopBanner from "../Components/topbanner";
+import ContactForm from "../Components/contactForm";
+import Footer from "../Components/footer";
 
 const ContactPage: React.FC = () => {     
     return (

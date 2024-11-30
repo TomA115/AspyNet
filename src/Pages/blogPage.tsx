@@ -1,8 +1,7 @@
 import axios from "axios";
 import { useEffect, useState, useRef } from "react";
-import BlogCard from "./blogCard";
-import { Post } from "./blogCard";
-import './CSS/Blog.css'
+import BlogCard, {Post} from "../Components/blogCard";
+import '../CSS/Blog.css';
 
 const BlogPage = () => {
     const [posts, setPosts] = useState<Post[]>([]);
