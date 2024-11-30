@@ -23,7 +23,6 @@ jobs:
       
     - name: Debug Secrets
       run: |
-        echo "AzureEmailEndpoint=\"${{ secrets.AzureEmailEndpoint }}\""
         echo "EmailFromAddress=\"${{ secrets.EmailFromAddress }}\""
         echo "EmailToAddress=\"${{ secrets.EmailToAddress }}\""
       
