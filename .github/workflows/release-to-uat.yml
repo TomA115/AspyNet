@@ -21,11 +21,6 @@ jobs:
     - name: Install dependencies
       run: npm install
       
-    - name: Debug Secrets
-      run: |
-        echo "EmailFromAddress=\"${{ secrets.EmailFromAddress }}\""
-        echo "EmailToAddress=\"${{ secrets.EmailToAddress }}\""
-      
     - name: Transform JSON
       run: |
         sed -i 's|\\${AzureEmailEndpoint}|'"${{ secrets.AzureEmailEndpoint }}"'|g' src/appsettings.json
