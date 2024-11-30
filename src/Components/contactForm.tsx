@@ -1,10 +1,12 @@
 import {useState} from "react";
 import '../CSS/ContactPage.css'
 import { ContactResponse, postContactForm } from "./ApiService";
-
+import config from '../appsettings.json';
+import AppSettings from "../Interfaces/appsettings";
 
 const ContactForm :React.FC = () =>{
 
+    const typedConfig = config as AppSettings;
     const initialFormValues = {
         ContactResponseText: '',
         name: '',
@@ -31,7 +33,7 @@ const ContactForm :React.FC = () =>{
             setButtonText('Submit');
         }
         catch{
-            alert("Failed to send email, please try again or email me directly at thomasaspy1@gmail.com");
+            alert(`Failed to send email, please try again or email me directly at ${typedConfig.EmailToAddress}`);
             setButtonText('Submit');
         }
 
