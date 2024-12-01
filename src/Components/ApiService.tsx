@@ -1,6 +1,3 @@
-import config from '../appsettings.json';
-import AppSettings from "../Interfaces/appsettings";
-
 export interface AboutContent {
     aboutTextId: number;
     aboutPageText: string;
@@ -17,10 +14,8 @@ export interface ContactResponse{
 
 
 export const postContactForm = async (form: ContactResponse): Promise<void> => {
-  const typedConfig = config as AppSettings;
   const {EmailClient} = require("@azure/communication-email");
-  console.log(typedConfig.AzureEmailEndpoint);
-  const connectionString = `endpoint=https://aspyemailer.uk.communication.azure.com/;accesskey=${typedConfig.AzureEmailEndpoint}`
+  const connectionString = "endpoint=https://aspyemailer.uk.communication.azure.com/;accesskey=6xAz4brvdQCLgMMsS31MzlIgJL4ICLeRSm2Mj9HgKxZWqg0wC8ieJQQJ99AGACULyCpcOiRxAAAAAZCSsM88";
   const client = new EmailClient(connectionString);
   try {
     let formToSend: ContactResponse = {
@@ -32,13 +27,13 @@ export const postContactForm = async (form: ContactResponse): Promise<void> => {
 
     console.log('Form data being sent:', formToSend);
     const message = {
-      senderAddress:typedConfig.EmailFromAddress,
+      senderAddress:"DoNotReply@379d5ed1-5188-4984-bde3-02c31707bf3c.azurecomm.net",
       content:{
         subject: formToSend.Subject,
         plainText: formToSend.ContactResponseText,
       },
       recipients:{
-        to:[{address:typedConfig.EmailToAddress}],
+        to:[{address:"thomasaspy1@gmail.com"}]
       },
     }
 
