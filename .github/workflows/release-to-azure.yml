@@ -21,11 +21,9 @@ jobs:
     - name: Install dependencies
       run: npm install
       
-    - name: Transform JSON
+    - name: Inject environment variables
       run: |
-        sed -i 's|\\${AzureEmailEndpoint}|'"${{ secrets.AzureEmailEndpoint }}"'|g' src/appsettings.json
-        sed -i 's|\\${EmailFromAddress}|'"${{ secrets.EmailFromAddress }}"'|g' src/appsettings.json
-        sed -i 's|\\${EmailToAddress}|'"${{ secrets.EmailToAddress }}"'|g' src/appsettings.json
+        echo "REACT_APP_AZURE_EMAIL_CONNECTION_STRING=${{ secrets.REACT_APP_AZURE_EMAIL_CONNECTION_STRING }}" >> .env
 
     - name: Build the project
       run: npm run build
