@@ -23,9 +23,9 @@ jobs:
       
     - name: Transform JSON
       run: |
-        sed -i 's|\\${AzureEmailEndpoint}|'"${{ secrets.AzureEmailEndpoint }}"'|g' src/appsettings.json
-        sed -i 's|\\${EmailFromAddress}|'"${{ secrets.EmailFromAddress }}"'|g' src/appsettings.json
-        sed -i 's|\\${EmailToAddress}|'"${{ secrets.EmailToAddress }}"'|g' src/appsettings.json
+        sed -i 's|\\${AzureEmailEndpoint}|'"${{secrets.AzureEmailEndpoint}}"'|g' src/appsettings.json
+        sed -i 's|\\${EmailFromAddress}|'"${{secrets.EmailFromAddress}}"'|g' src/appsettings.json
+        sed -i 's|\\${EmailToAddress}|'"${{secrets.EmailToAddress}}"'|g' src/appsettings.json
 
     - name: Build the project
       run: npm run build
