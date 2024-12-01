@@ -15,7 +15,7 @@ export interface ContactResponse{
 
 export const postContactForm = async (form: ContactResponse): Promise<void> => {
   const {EmailClient} = require("@azure/communication-email");
-  const connectionString = "endpoint=https://aspyemailer.uk.communication.azure.com/;accesskey=6xAz4brvdQCLgMMsS31MzlIgJL4ICLeRSm2Mj9HgKxZWqg0wC8ieJQQJ99AGACULyCpcOiRxAAAAAZCSsM88";
+  const connectionString = process.env.REACT_APP_AZURE_EMAIL_CONNECTION_STRING;
   const client = new EmailClient(connectionString);
   try {
     let formToSend: ContactResponse = {
