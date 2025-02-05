@@ -9,13 +9,14 @@ export interface ContactResponse{
   Subject:string;
   EmailAddress:string;
 }
-
-
+import { EmailClient } from "@azure/communication-email";
 
 
 export const postContactForm = async (form: ContactResponse): Promise<void> => {
-  const {EmailClient} = require("@azure/communication-email");
   const connectionString = process.env.REACT_APP_AZURE_EMAIL_CONNECTION_STRING;
+  if (!connectionString) {
+    throw new Error("Azure email connection string is not defined");
+  }
   const client = new EmailClient(connectionString);
   try {
     let formToSend: ContactResponse = {

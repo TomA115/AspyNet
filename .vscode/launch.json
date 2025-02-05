@@ -1,20 +1,11 @@
 {
-    "version": "0.2.0",
-    "configurations": [
-      {
-        "name": "Debug React App",
-        "type": "firefox",
-        "request": "launch",
-        "reAttach": true,
-        "url": "http://localhost:3000",
-        "webRoot": "${workspaceFolder}/src",
-        "pathMappings": [
-          {
-            "url": "webpack:///src/",
-            "path": "${webRoot}/"
-          }
-        ],
-        "skipFiles": ["node_modules/**"]
-      }
-    ]
+  "configurations": [
+  {
+    "name": "Launch Edge",
+    "request": "launch",
+    "type": "msedge",
+    "url": "http://localhost:5173",
+    "webRoot": "${workspaceFolder}"
   }
+  ]
+}
