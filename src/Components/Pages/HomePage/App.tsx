@@ -62,6 +62,10 @@ function App() {
         <h1 className="text-4xl font-extrabold text-center text-blue-600 ">I have experience with</h1>
         <div id="cards" className="flex flex-col sm:flex-row flex-wrap gap-6 justify-center p-10 bg-gray-100 pb-20">
           <FlatCard title="CI/CD" text={["Azure DevOps", "GitHub actions", "Automated testing", "Build and release pipelines", "JIRA/Confluence"]} />
+          <FlatCard title="Frontend" text={["TypeScript/Javascript", "React", "CSS", "Component libraries", "Redux"]} />
+          <FlatCard title="Backend" text={["C# .NET Core", "Azure Functions", "RESTful APIs", "Entity Framework", "Python"]} />
+          <FlatCard title="Business Intelligence" text={["Microsoft SSAS/IS/RS flows", "MDX Cubes", "Tableau server", "Visual Basic (Excel/.NET)"]} />
+          <FlatCard title="System types" text={["Full-stack web apps", "noSQL databases", "Time-series data", "Master data managment", "Data lakes"]} />
         </div>
         </section>
 
