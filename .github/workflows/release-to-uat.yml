@@ -23,7 +23,7 @@ jobs:
       
     - name: Inject environment variables
       run: |
-        echo "REACT_APP_AZURE_EMAIL_CONNECTION_STRING=${{ secrets.REACT_APP_AZURE_EMAIL_CONNECTION_STRING }}" >> .env
+        echo "VITE_AZURE_EMAIL_CONNECTION_STRING=${{ secrets.REACT_APP_AZURE_EMAIL_CONNECTION_STRING }}" >> .env
       
     - name: Build the project
       run: npm run build

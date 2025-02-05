@@ -17,8 +17,8 @@ export const postContactForm = async (form: ContactResponse): Promise<void> => {
   if (!connectionString) {
     throw new Error("Azure email connection string is not defined");
   }
-  const client = new EmailClient(connectionString);
   try {
+    const client = new EmailClient(connectionString);
     let formToSend: ContactResponse = {
       ContactResponseText: form.ContactResponseText,
       Subject: "Sent from " + form.name + " at " + form.EmailAddress + " " + form.Subject,
