@@ -13,21 +13,20 @@ function App() {
         {/* Header */}
         <AppNavbar/>
         {/* Hero Section - Banner */}
-        <section className="h-5/6 flex items-center justify-center bg-cover bg-center text-white w-full pt-8 bg-gray-100 mt-10" 
-          >
-          <div className="flex items-center justify-between w-4/5 p-8 bg-opacity-75 rounded-lg shadow-lg bg-white">
-            <div className="max-w-xl text-center">
-              <h1 className="text-6xl font-extrabold text-blue-600 mb-20">
-                Tom Aspinall
-              </h1>
-              <div className="mb-24">
-                <p className="text-xl  text-blue-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
-                <p className="text-xl mt-2  text-blue-600">Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta.</p>
+        <section className="h-5/6 flex flex-col items-center justify-center bg-cover bg-center text-white w-full pt-8 bg-gray-100 mt-10">
+          <div className="flex flex-col sm:flex-col md:flex-row items-center justify-between w-4/5 p-8 bg-opacity-75 rounded-lg shadow-lg bg-white">
+            <div className="flex items-center justify-center w-full sm:w-full md:w-2/5 h-full p-4 mb-8 sm:mb-8 md:mb-0 md:mr-4">
+              <div className="bg-white rounded-lg shadow-lg overflow-hidden w-full h-full">
+          <img src="/profilepic.jpeg" alt="Description" className="w-full h-full object-cover" />
               </div>
             </div>
-            <div className="flex items-center justify-center w-1/3 h-full p-4">
-              <div className="bg-white rounded-lg shadow-lg overflow-hidden w-full h-full">
-                <img src="/profilepic.jpeg" alt="Description" className="w-full h-full object-cover" />
+            <div className="max-w-xl text-center sm:text-center md:text-left">
+              <h1 className="text-6xl font-extrabold text-blue-600 mb-20">
+          Tom Aspinall
+              </h1>
+              <div className="mb-24">
+          <p className="text-xl text-blue-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
+          <p className="text-xl mt-2 text-blue-600">Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta.</p>
               </div>
             </div>
           </div>
@@ -48,7 +47,7 @@ function App() {
         </section>
 
 
-        <section className="p-8 rounded-lg shadow-lg mt-32 m-10">
+        <section className="p-8 rounded-lg shadow-lg mt-32 m-10 w-full mx-auto sm:1/3 md:w-4/6 lg:w-5/6">
 
         {/* Title */}
         <h1 className="text-4xl font-extrabold text-center mb-8 text-blue-600">About me</h1>
