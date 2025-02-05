@@ -37,9 +37,11 @@ export const postContactForm = async (form: ContactResponse): Promise<void> => {
         to: [{ address: "thomasaspy1@gmail.com" }]
       },
     }
-
-    const poller = await client.beginSend(message);
-    await poller.pollUntilDone();
+    client.beginSend(message).then(poller => {
+      console.log('Email sending started:', poller.getOperationState());
+    }).catch(error => {
+      console.log("Error starting email send operation", error);
+    });
 
   } catch (error) {
     console.log("Error sending email", error);
