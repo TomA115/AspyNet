@@ -7,7 +7,7 @@ type FlatCardProps = {
 
 const FlatCard = ({ title = "", text = [] }: FlatCardProps) => {
   return (
-    <Card className="max-w-sm min-w-[400px] bg-white dark:bg-white border-none dark:text-blue-600 text-blue-600">
+    <Card className="max-w-sm lg:min-w-[400px] bg-white dark:bg-white border-none dark:text-blue-600 text-blue-600">
       <h5 className="text-2xl font-bold tracking-tight">
         {title}
       </h5>
