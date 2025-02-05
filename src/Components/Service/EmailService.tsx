@@ -1,19 +1,19 @@
-export interface AboutContent {
-    aboutTextId: number;
-    aboutPageText: string;
-  }
-
-export interface ContactResponse{
-  ContactResponseText:string;
-  name:string;
-  Subject:string;
-  EmailAddress:string;
-}
 import { EmailClient } from "@azure/communication-email";
 
+export interface AboutContent {
+  aboutTextId: number;
+  aboutPageText: string;
+}
+
+export interface ContactResponse {
+  ContactResponseText: string;
+  name: string;
+  Subject: string;
+  EmailAddress: string;
+}
 
 export const postContactForm = async (form: ContactResponse): Promise<void> => {
-  const connectionString = import.meta.env.REACT_APP_AZURE_EMAIL_CONNECTION_STRING;
+  const connectionString = import.meta.env.VITE_AZURE_EMAIL_CONNECTION_STRING;
   if (!connectionString) {
     throw new Error("Azure email connection string is not defined");
   }
@@ -28,13 +28,13 @@ export const postContactForm = async (form: ContactResponse): Promise<void> => {
 
     console.log('Form data being sent:', formToSend);
     const message = {
-      senderAddress:"DoNotReply@379d5ed1-5188-4984-bde3-02c31707bf3c.azurecomm.net",
-      content:{
+      senderAddress: "DoNotReply@379d5ed1-5188-4984-bde3-02c31707bf3c.azurecomm.net",
+      content: {
         subject: formToSend.Subject,
         plainText: formToSend.ContactResponseText,
       },
-      recipients:{
-        to:[{address:"thomasaspy1@gmail.com"}]
+      recipients: {
+        to: [{ address: "thomasaspy1@gmail.com" }]
       },
     }
 
@@ -42,6 +42,6 @@ export const postContactForm = async (form: ContactResponse): Promise<void> => {
     await poller.pollUntilDone();
 
   } catch (error) {
-      console.log("Error sending email",error);
-}
+    console.log("Error sending email", error);
+  }
 };
