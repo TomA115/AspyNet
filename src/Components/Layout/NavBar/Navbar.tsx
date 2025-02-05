@@ -7,11 +7,13 @@ export default function AppNavbar() {
         <span className="self-center whitespace-nowrap text-4xl font-semibold  text-blue-600">TomAspinall.uk</span>
       </Navbar.Brand>
       <Navbar.Toggle />
+      {/*
       <Navbar.Collapse>
         <Navbar.Link href="#" className="dark:text-blue-600 hover:text-blue-600 dark:hover:text-blue-600">Home</Navbar.Link>
         <Navbar.Link href="#" className="dark:text-blue-600 hover:text-black dark:hover:text-black">About</Navbar.Link>
         <Navbar.Link href="#" className="dark:text-blue-600 hover:text-black dark:hover:text-blue-600">Contact</Navbar.Link>
       </Navbar.Collapse>
+      */}
     </Navbar>
   );
 }

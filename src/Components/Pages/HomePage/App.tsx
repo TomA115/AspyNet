@@ -1,8 +1,9 @@
 import AppNavbar from "../../Layout/NavBar/Navbar";
 import { SiteFooter } from "../../Layout/Footer/Footer";
 import FlatCard from "../../UI/Card";
-import { AppTimeline } from "../../UI/Timeline";
 import { Flowbite } from "flowbite-react";
+import ImageLink from "../../UI/ImageLink";
+import ContactForm from "../../UI/ContactForm";
 
 
 function App() {
@@ -49,16 +50,32 @@ function App() {
 
         <section className="p-8 rounded-lg shadow-lg mt-32 m-10">
 
-          {/* Title */}
-          <h1 className="text-4xl font-extrabold text-center mb-8 text-blue-600">About me</h1>
+        {/* Title */}
+        <h1 className="text-4xl font-extrabold text-center mb-8 text-blue-600">About me</h1>
+          {/* Paragraphs */}
+          <div className="text-lg text-gray-700 leading-relaxed">
+            <p className="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta.</p>
+            <p className="mb-4">Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor.</p>
+            <p className="mb-4">Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh.</p>
+          </div>        
+        </section>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="p-6 bg-gray-100 dark:bg-gray-800 rounded-lg">
-              <AppTimeline />
+        <section className="mt-32 w-screen">
+          {/* Contact form */}
+          <ContactForm/>
+        </section>
+
+        {/* Icons Section */}
+        <section className="flex justify-center mt-10">
+          <div className="flex space-x-10">
+            <div className="flex flex-col items-center">
+              <ImageLink imageUrl="cancer-research.png" linkUrl="https://www.cancerresearchuk.org/" altText="cancer research logo"/>
             </div>
-            <div className="p-6 bg-gray-100 dark:bg-gray-800 rounded-lg">
-              <h2 className="text-2xl font-bold">some text here</h2>
-              <p className="text-gray-700 dark:text-gray-300">something useful about how great we are</p>
+            <div className="flex flex-col items-center">
+              <ImageLink imageUrl="kidney-research.png" linkUrl="https://www.kidneyresearchuk.org/support/" altText="kidney research logo"/>
+            </div>
+            <div className="flex flex-col items-center">
+              <ImageLink imageUrl="claire-house.png" linkUrl="https://www.clairehouse.org.uk/donate/" altText="claire house logo"/>
             </div>
           </div>
         </section>
