@@ -32,4 +32,4 @@ jobs:
       uses: azure/CLI@v1
       with:
         inlineScript: |
-          az storage blob upload-batch --account-name ${{ secrets.AZURE_STORAGE_ACCOUNT_UAT }} --account-key ${{ secrets.AZURE_STORAGE_ACCESS_KEY_UAT }} --source ./build --destination \$web --overwrite
+          az storage blob upload-batch --account-name ${{ secrets.AZURE_STORAGE_ACCOUNT_UAT }} --account-key ${{ secrets.AZURE_STORAGE_ACCESS_KEY_UAT }} --source ./dist --destination \$web --overwrite
