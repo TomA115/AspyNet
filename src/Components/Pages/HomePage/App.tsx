@@ -61,7 +61,7 @@ function App() {
         <section className="m-10 rounded-lg shadow-lg mt-32">
         <h1 className="text-4xl font-extrabold text-center text-blue-600 ">I have experience with</h1>
         <div id="cards" className="flex flex-col sm:flex-row flex-wrap gap-6 justify-center p-10 bg-gray-100 pb-20">
-          <FlatCard title="CI/CD" text={["Azure DevOps"]} />
+          <FlatCard title="CI/CD" text={["Azure DevOps", "GitHub actions", "Automated testing", "Build and release pipelines", "JIRA/Confluence"]} />
         </div>
         </section>
 
