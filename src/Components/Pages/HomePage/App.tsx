@@ -14,21 +14,33 @@ function App() {
         <AppNavbar/>
         {/* Hero Section - Banner */}
         <section className="h-5/6 flex flex-col items-center justify-center bg-cover bg-center text-white w-full pt-8 bg-gray-100 mt-10">
-          <div className="flex flex-col sm:flex-col md:flex-row items-center justify-between w-4/5 p-8 bg-opacity-75 rounded-lg shadow-lg bg-white">
-            <div className="flex items-center justify-center w-full sm:w-full md:w-2/5 h-full p-4 mb-8 sm:mb-8 md:mb-0 md:mr-4">
+          <div className="flex flex-col sm:flex-col md:flex-row items-center justify-between w-11/12 p-8 bg-opacity-75 rounded-lg shadow-lg bg-white">
+            <div className="flex items-center justify-center w-full sm:w-full md:w-2/5 h-full p-4 mb-8 sm:mb-8 md:mb-0 md:mr-2">
               <div className="bg-white rounded-lg shadow-lg overflow-hidden w-full h-full">
           <img src="/profilepic.jpeg" alt="Description" className="w-full h-full object-cover" />
               </div>
             </div>
-            <div className="max-w-xl text-center sm:text-center md:text-left">
-              <h1 className="text-6xl font-extrabold text-blue-600 mb-20">
+            <div className="max-w-3xl text-center sm:text-center md:text-left w-full flex flex-col justify-center h-full overflow-hidden">
+              <h1 className="text-6xl font-extrabold text-blue-600 mb-6 text-center">
           Tom Aspinall
               </h1>
-              <div className="mb-24">
-          <p className="text-xl text-blue-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
-          <p className="text-xl mt-2 text-blue-600">Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta.</p>
+              <div className="mb-8">
+          <p className="text-xl text-black text-left">I am a London based product engineer with over four years of experience building and supporting enterprise products. 
+            I have experience across the stack but have the most experience in C# .NET, React, TypeScript, Azure and Microsoft SQL Server.
+          </p>
+          <p className="text-xl text-black text-left mt-8">
+            I spent four years completing my degree apprenticeship in 
+            Digital and Technology Solutions (BsC) with the University of Exeter and Bank of England where I now continue to work as a product engineer on a variety of enterprise apps.
+          </p>
+          <p className="text-xl mt-4 text-black text-left">I am always trying to learn new skills and expand my capabilities. My primary passion is for solving problems and it's what I enjoy most about my work
+            and about working with technology in general.
+          </p>
+          <p className="text-xl mt-4 text-black text-left">Before you continue (or leave) I ask that you consider clicking one of the three links below. It could make a real difference.
+          </p>
+          <p className="text-xl mt-2 text-black text-left">Thank you.
+          </p>
               </div>
-              <section className="flex justify-center mt-10">
+          <section className="flex justify-center mt-1">
           <div className="flex space-x-10">
             <div className="flex flex-col items-center">
               <ImageLink imageUrl="cancer-research.png" linkUrl="https://www.cancerresearchuk.org/" altText="cancer research logo"/>
@@ -40,22 +52,16 @@ function App() {
               <ImageLink imageUrl="claire-house.png" linkUrl="https://www.clairehouse.org.uk/donate/" altText="claire house logo"/>
             </div>
           </div>
-        </section>  
+              </section>  
             </div>
           </div>
         </section>
 
         {/* Cards Section */}
         <section className="m-10 rounded-lg shadow-lg mt-32">
-        <h1 className="text-4xl font-extrabold text-center text-blue-600 ">Some of My Skills</h1>
+        <h1 className="text-4xl font-extrabold text-center text-blue-600 ">I have experience with</h1>
         <div id="cards" className="flex flex-col sm:flex-row flex-wrap gap-6 justify-center p-10 bg-gray-100 pb-20">
-          <FlatCard title="Support" text="We offer a range of support solutions to help meet your SLA's and keep your systems stable" />
-          <FlatCard title="Analysis" text="Our expert business analysts can help identify opportunities for technology-driven value creation in your business" />
-          <FlatCard title="Development" text="Bespoke development services for all stages of the product cycle"/>
-          <FlatCard title="Development" text="Bespoke development services for all stages of the product cycle"/>
-          <FlatCard title="Development" text="Bespoke development services for all stages of the product cycle"/>
-          <FlatCard title="Development" text="Bespoke development services for all stages of the product cycle"/>
-          <FlatCard title="Development" text="Bespoke development services for all stages of the product cycle"/>
+          <FlatCard title="CI/CD" text={["Azure DevOps"]} />
         </div>
         </section>
 
