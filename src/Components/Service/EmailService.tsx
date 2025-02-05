@@ -13,7 +13,7 @@ import { EmailClient } from "@azure/communication-email";
 
 
 export const postContactForm = async (form: ContactResponse): Promise<void> => {
-  const connectionString = process.env.REACT_APP_AZURE_EMAIL_CONNECTION_STRING;
+  const connectionString = import.meta.env.REACT_APP_AZURE_EMAIL_CONNECTION_STRING;
   if (!connectionString) {
     throw new Error("Azure email connection string is not defined");
   }
