@@ -6,7 +6,6 @@ export default function AppNavbar() {
       <Navbar.Brand href="#">
         <span className="self-center whitespace-nowrap text-4xl font-semibold  text-blue-600">TomAspinall.uk</span>
       </Navbar.Brand>
-      <Navbar.Toggle />
       {/*
       <Navbar.Collapse>
         <Navbar.Link href="#" className="dark:text-blue-600 hover:text-blue-600 dark:hover:text-blue-600">Home</Navbar.Link>

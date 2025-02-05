@@ -16,7 +16,7 @@ interface ContactFormProps {
 
 const ContactForm: React.FC<ContactFormProps> = ({ form, handleInputChange, handleTextAreaChange, HandleFormSubmit, buttonText }) => {
   return (
-    <form className=" mx-auto p-8 bg-gray-100 rounded-lg shadow-lg w-1/2" onSubmit={HandleFormSubmit}>
+    <form className="mx-auto p-8 bg-gray-100 rounded-lg shadow-lg w-full sm:w-5/6 md:w-2/3 lg:w-1/2" onSubmit={HandleFormSubmit}>
       <h1 className="text-4xl font-extrabold text-center mb-8 text-blue-600">Get in contact</h1>
       <div className="mb-4">
         <input
